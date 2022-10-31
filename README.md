@@ -1,10 +1,16 @@
-# Task-List-Privacy-Policy
-Task List Application is used to keep your personal task list.
-Data that we store
-- Email Id with registration
-- Task list with encrypted title and its content.
+Task List Application is used to keep your tasks safe and secure.
+Use Task list application for storing different categories of tasks like: 
+- To do
+- Shopping List
+- Personal
+- Passwords
+- Others
 
-We don't share any data provided by any User.
-User can delete their account and data anytime in application itself.
+The Data that we store from our users is
+- Email Id while registration process
+- Google Firebase handles your authentication with your email id and password. We do not store your password.
 
-We use google firebase authentication system, google takes care of all user authentication credentials.
+- Your Tasks are secured with encrypted title and its content in google firebase database.
+- We don't share any of your data to anyone.
+- Any Users can delete their account and their personal data on this application anytime by going to settings tab. 
+(*After deletion, there is no way to get your data back).
