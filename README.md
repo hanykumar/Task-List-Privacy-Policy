@@ -31,4 +31,22 @@ Steps:
 Make sure internet is enabled during this above steps.
 
 
+
+<h1>Reset account</h1>
+
+If you are a verified registered user, you can delete your all your data only and you don't wan to delete your account, you can do it by following steps
+
+Steps:
+- Login to the application
+- Go to Settings Tab
+- Scroll down settings list to **Reset Account**
+- Click on it
+- A modal will be open to confirm it by tying 'Reset' in a text box.
+- Click on 'yes'
+- If your all data/tasks are deleted, you will see a pop-up message saying that all your tasks have been deleted.
+- You will be not be logged out of the application , however you always add new tasks/data. 
+
+Make sure internet is enabled during this above steps.
+
+
  
