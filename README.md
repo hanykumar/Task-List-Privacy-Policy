@@ -1,17 +1,13 @@
-Task List Application is used to keep your tasks safe and secure.
-You can use this application for storing your data in different categories.
-e.g.
-- To do
+The Task List Application ensures the safety and security of your tasks, providing a reliable platform for organizing your data across various categories, such as:
+- To-do
 - Shopping List
 - Personal
 - Passwords
+- Work
 - Others
 
-The Data that we store from our users is
-- Email Id while registration process
-- Google Firebase handles your authentication with your email id and password. We do not store your password.
+During the registration process, we collect users' email IDs for identification purposes. Google Firebase manages authentication using the provided email ID and password. It's important to note that we do not store users' passwords.
 
-- Your Tasks are secured with encrypted title and encrypted content in google firebase database.
-- We don't share any of your data to anyone.
-- Any User can delete their account and data on this application itself anytime by going into settings tab. 
-(*After deletion, there is no way to get your data back).
+Your task data is stored securely in the Google Firebase database, with both the title and content encrypted to enhance protection. We prioritize user privacy and do not share any data with third parties.
+
+For users who wish to discontinue using the application, there's a convenient account deletion feature accessible through the settings tab. It's crucial to be aware that once an account is deleted, data cannot be recovered. Your privacy and control over your information are our top priorities.
