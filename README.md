@@ -16,7 +16,7 @@ For users who wish to discontinue using the application, there's a convenient ac
 
 <h1>DELETE ACCOUNT</h1>
 
-If you are a verified registered user, you can delete your acocunt with complete data.
+If you are a verified registered user, you can delete your account with complete data.
 
 Steps:
 - Login to the application
