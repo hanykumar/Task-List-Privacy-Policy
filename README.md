@@ -1,11 +1,16 @@
 <h1>About Task List</h1>
-The Task List Application ensures the safety and security of your tasks, providing a reliable platform for organizing your data across various categories, such as:
+The Task List Application ensures the safety and security of your tasks, providing a reliable platform for organizing your data across various categories, 
+such as:
+
 - To-do
 - Shopping List
 - Personal
 - Passwords
 - Work
 - Others
+
+We have web app as well.
+https://tasklist-hanykumar.vercel.app/
 
 <h1>Privacy and policy</h1>
 During the registration process, we collect users' email IDs for identification purposes. Google Firebase manages authentication using the provided email ID and password. It's important to note that we do not store users' passwords.
