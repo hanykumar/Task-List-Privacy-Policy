@@ -10,9 +10,9 @@ such as:
 - Others
 
 Related Links:
-https://hanykumar.in/
-https://play.google.com/store/apps/details?id=com.hanykumar.tasklist&pli=1
-[https://tasklist-hanykumar.vercel.app/](https://tasklist.hanykumar.in/)
+- https://hanykumar.in/
+- https://play.google.com/store/apps/details?id=com.hanykumar.tasklist&pli=1
+- [https://tasklist-hanykumar.vercel.app/](https://tasklist.hanykumar.in/)
 
 <h1>Privacy and policy</h1>
 During the registration process, we collect users' email IDs for identification purposes. Google Firebase manages authentication using the provided email ID and password. It's important to note that we do not store users' passwords.
