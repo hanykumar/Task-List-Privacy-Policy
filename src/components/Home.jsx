@@ -5,11 +5,6 @@ import '../App.css';
 
 const policyData = [
   {
-    title: 'About Task List',
-    content:
-      'Task List is a feature-rich application designed to help you organize and manage tasks efficiently across multiple categories, including To-do, Shopping List, Work, Personal, Passwords, and others. With a focus on simplicity, security, and performance, Task List offers advanced features such as encryption, favorite tasks, theme management, and seamless search capabilities.',
-  },
-  {
     title: 'Introduction',
     content:
       'The Task List application ensures your tasks are safe and organized in a secure environment. We offer ad-free, free-of-cost access to help you focus on productivity without interruptions. With multiple categories and features like starred tasks and password protection, Task List helps you manage your workload with ease.',
