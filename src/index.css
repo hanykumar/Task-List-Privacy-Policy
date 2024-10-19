@@ -12,6 +12,11 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
 
 .app-container {
   font-family: 'Montserrat', sans-serif;
@@ -58,10 +63,4 @@ h1 {
   line-height: 1.6;
   color: #454545;
   font-weight: 400;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa;
 }

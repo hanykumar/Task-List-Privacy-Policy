@@ -1,7 +1,7 @@
 // src/App.jsx
 import React from 'react';
 import PolicySection from './PolicySection';
-import '../App.css'; 
+import '../App.css';
 
 const policyData = [
   {
@@ -75,10 +75,27 @@ const policyData = [
       'Task List is completely ad-free and free to use, providing you with a smooth, uninterrupted task management experience.',
   },
   {
-    title: 'Contact and Support',
-    content:
-      'For any questions or support, reach out through the "Write to Us" section in the app or visit our website at https://hanykumar.in. We are committed to providing prompt assistance for any issues or inquiries.',
+    title: 'TaskList Web Application',
+    content: (
+      <span>
+        Access the TaskList app online at{' '}
+        <a href="https://tasklist.hanykumar.in" target="_blank" rel="noopener noreferrer">
+          tasklist.hanykumar.in
+        </a>.
+      </span>
+    ),
   },
+  {
+    title: 'Contact and Support',
+    content: (
+      <span>
+        For any questions or support, reach out through the "Write to Us" section in the app or visit our website at{' '}
+        <a href="https://hanykumar.in" target="_blank" rel="noopener noreferrer">
+          hanykumar.in
+        </a>. We are committed to providing prompt assistance for any issues or inquiries.
+      </span>
+    ),
+  }
 ];
 
 
