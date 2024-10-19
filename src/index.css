@@ -1,13 +1,14 @@
+/* src/index.css */
 @font-face {
   font-family: 'Montserrat';
-  src: url('assets\fonts\Montserrat-Medium.ttf') format('truetype');
+  src: url('/assets/fonts/Montserrat-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  src: url('/assets/fonts/Montserrat-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -16,6 +17,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 .app-container {
@@ -48,19 +51,16 @@ body {
 
 h1 {
   font-size: 28px;
-  color: teal;
-  margin: 0;
-  font-weight: 700;
+  font-weight: 700; 
+  color: #333;
 }
 
 .policy-content h2 {
-  color: #343434;
-  font-size: 20px;
-  font-weight: 700;
+  font-weight: 700; 
+  color: teal;
 }
 
 .policy-content p {
+  font-weight: 400; 
   line-height: 1.6;
-  color: #454545;
-  font-weight: 400;
 }

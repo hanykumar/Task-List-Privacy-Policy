@@ -103,7 +103,7 @@ const Home = () => {
   return (
     <div className="app-container">
       <header className="app-header">
-        <img src="src\assets\icon.png" alt="Task List App" className="app-icon" />
+        <img src="/icon.png" alt="Task List App" className="app-icon" />
         <h1>Task List - Privacy & Policy</h1>
       </header>
 
