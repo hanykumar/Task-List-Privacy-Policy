@@ -62,7 +62,7 @@ const policyData = [
   {
     title: 'Privacy Policy Transparency',
     content:
-      'We are committed to transparency in how your data is handled. Our privacy policy is available on both the app and the web at https://task list.hanykumar.in, ensuring you have full visibility of our data practices.',
+      'We are committed to transparency in how your data is handled. Our privacy policy is available on both the app and the web at https://tasklist.hanykumar.in, ensuring you have full visibility of our data practices.',
   },
   {
     title: 'Data Sharing Policy',
