@@ -1,13 +1,26 @@
 // src/components/PolicySection.jsx
-import React from 'react';
+import PropTypes from 'prop-types';
+import { memo } from 'react';
 
-const PolicySection = ({ title, content }) => {
+const PolicySection = ({ sectionId, title, content }) => {
   return (
-    <section style={{ padding: '20px', margin: '10px 0', borderBottom: '1px solid #ccc' }}>
+    <section id={sectionId} className="policy-section">
       <h2>{title}</h2>
-      <p>{content}</p>
+      <div className="policy-body">
+        {typeof content === 'string' ? <p>{content}</p> : content}
+      </div>
     </section>
   );
 };
 
-export default React.memo(PolicySection);
+PolicySection.propTypes = {
+  sectionId: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
+};
+
+PolicySection.defaultProps = {
+  sectionId: undefined,
+};
+
+export default memo(PolicySection);

@@ -1,113 +1,222 @@
-// src/App.jsx
-import React from 'react';
 import PolicySection from './PolicySection';
-import '../App.css';
+
+const APP_NAME = 'Task List';
+const EFFECTIVE_DATE = 'May 11, 2026';
+
+const appContent = {
+  overview: {
+    title: 'Privacy-first task management',
+    subtitle: 'Task List is designed to help you stay organized while keeping your data private and secure.',
+    bullets: [
+      'Works offline and syncs when internet is back.',
+      'Sensitive task content is protected with Firebase-backed security controls.',
+      'Completely ad-free and free to use.',
+    ],
+  },
+  links: {
+    appSite: {
+      title: 'tasklist.hanykumar.in',
+      url: 'https://tasklist.hanykumar.in',
+    },
+    androidApp: {
+      title: 'Google Play (Android)',
+      url: 'https://play.google.com/store/apps/details?id=com.hanykumar.tasklist&hl=en',
+    },
+    developerSite: {
+      title: 'hanykumar.in',
+      url: 'https://hanykumar.in',
+    },
+  },
+};
+
+const quickLinks = [
+  { id: 'information-we-collect', label: 'Information We Collect' },
+  { id: 'how-we-use-information', label: 'How We Use Information' },
+  { id: 'sharing-and-disclosure', label: 'Sharing and Disclosure' },
+  { id: 'data-retention', label: 'Data Retention' },
+  { id: 'your-controls', label: 'Your Controls' },
+  { id: 'contact', label: 'Contact' },
+];
 
 const policyData = [
   {
-    title: 'Introduction',
+    id: 'introduction',
+    title: '1) Introduction',
     content:
-      'The Task List application ensures your tasks are safe and organized in a secure environment. We offer ad-free, free-of-cost access to help you focus on productivity without interruptions. With multiple categories and features like starred tasks and password protection, Task List helps you manage your workload with ease.',
+      'This Privacy Policy explains how Task List collects, uses, and protects your information when you use the app and related services.',
   },
   {
-    title: 'Data Collection and Authentication',
+    id: 'information-we-collect',
+    title: '2) Information We Collect',
     content:
-      'We collect your email ID during registration to authenticate users. Authentication is handled by Google Firebase. We never store your passwords; instead, Firebase ensures secure authentication using industry-standard encryption protocols.',
+      'We collect your email address for account authentication and sync. We also process task data you create, including titles, descriptions, categories, reminders, and app preferences.',
   },
   {
-    title: 'Task Data Encryption and Security',
+    id: 'how-we-use-information',
+    title: '3) How We Use Information',
     content:
-      'All task titles and content are encrypted before being stored in Firebase, ensuring your data is always protected. Tasks under the "Passwords" category are hidden by default for additional security, with an option to reveal them temporarily as needed.',
+      'Your information is used only to provide and improve core functionality such as authentication, task syncing, reminders, category management, search/filter operations, and account support.',
   },
   {
-    title: 'Themes and User Experience',
+    id: 'authentication-and-security',
+    title: '4) Authentication and Security',
     content:
-      'The application supports both Light and Dark themes, allowing you to switch based on your preference. You can also set the app to follow your system theme for a seamless experience.',
+      'Authentication is managed through Firebase. Passwords are not stored directly by Task List. We rely on Firebase authentication and standard security protections for session and account safety.',
   },
   {
-    title: 'Managing Favorite Tasks and Categories',
+    id: 'task-data-protection',
+    title: '5) Task Data Protection',
     content:
-      'Tasks can be marked as favorites to prioritize important items. Additionally, the app allows you to organize tasks by category, such as To-do, Work, or Personal, making it easy to keep things structured.',
+      'Task content is protected and stored using secure Firebase-backed infrastructure. Sensitive categories include additional safeguards to reduce accidental exposure.',
   },
   {
-    title: 'Copy Restrictions for Sensitive Data',
+    id: 'secret-category-and-pin',
+    title: '6) Secret Category and PIN',
     content:
-      'For security purposes, copying content from tasks in the "Passwords" category is restricted. This ensures that your sensitive data remains protected from unauthorized copying.',
+      'Sensitive tasks can be protected inside Secret categories with a PIN. Copy restrictions may apply for these entries to help protect confidential data.',
   },
   {
-    title: 'Search and Filter Capabilities',
+    id: 'offline-use-and-sync',
+    title: '7) Offline Use and Sync',
     content:
-      'Easily search and filter tasks by category, title, or content. You can also filter by starred tasks, making it easier to access your most important tasks quickly.',
+      'Task List supports offline usage. Changes made offline sync automatically once internet connectivity returns.',
   },
   {
-    title: 'Resetting Tasks',
+    id: 'sharing-and-disclosure',
+    title: '8) Sharing and Disclosure',
     content:
-      'If you need to clear all tasks without deleting your account, you can reset your task list from the settings. This action deletes all tasks, but you can continue using the app and add new tasks afterward.',
+      'We do not sell personal data. We do not share your task content with third parties for advertising or marketing.',
   },
   {
-    title: 'Account Deletion and Data Erasure',
+    id: 'data-retention',
+    title: '9) Data Retention',
     content:
-      'If you decide to discontinue using the app, you can delete your account from the settings. This action permanently erases all your data, including tasks and account information, and cannot be undone.',
+      'Your data is retained while your account remains active. You can reset your tasks or delete your account at any time from settings.',
   },
   {
-    title: 'Network Requirements for Account Actions',
+    id: 'your-controls',
+    title: '10) Your Controls',
     content:
-      'Ensure you have an active internet connection while performing actions such as resetting tasks or deleting your account. These operations require server communication to complete.',
+      'You can manage categories, favorites, reminders, and account-related actions from within the app. Reset and account deletion actions require internet connectivity to complete.',
   },
   {
-    title: 'Privacy Policy Transparency',
+    id: 'childrens-privacy',
+    title: "11) Children's Privacy",
     content:
-      'We are committed to transparency in how your data is handled. Our privacy policy is available on both the app and the web at https://tasklist.hanykumar.in, ensuring you have full visibility of our data practices.',
+      'Task List is not intended for children under 13. If you believe a child has provided personal information, contact us and we will take appropriate action.',
   },
   {
-    title: 'Data Sharing Policy',
+    id: 'policy-updates',
+    title: '12) Policy Updates',
     content:
-      'We do not share your personal information or task data with third parties. All data is securely managed within the Firebase ecosystem.',
+      'We may update this policy when features, legal requirements, or data practices change. The current version will always be available on this page.',
   },
   {
-    title: 'No Ads, Free of Cost',
-    content:
-      'Task List is completely ad-free and free to use, providing you with a smooth, uninterrupted task management experience.',
-  },
-  {
-    title: 'TaskList Web Application',
+    id: 'reset-and-delete-actions',
+    title: '13) Reset and Delete Actions',
     content: (
-      <span>
-        Access the TaskList app online at{' '}
-        <a href="https://tasklist.hanykumar.in" target="_blank" rel="noopener noreferrer">
-          tasklist.hanykumar.in
-        </a>.
-      </span>
+      <>
+        <p>
+          You can reset tasks without deleting your account, or permanently delete your account from app settings.
+        </p>
+        <p className="policy-note">
+          Account deletion removes account-associated data from our systems and cannot be undone.
+        </p>
+      </>
     ),
   },
   {
-    title: 'Contact and Support',
+    id: 'contact',
+    title: '14) Contact',
     content: (
-      <span>
-        For any questions or support, reach out through the "Write to Us" section in the app or visit our website at{' '}
-        <a href="https://hanykumar.in" target="_blank" rel="noopener noreferrer">
-          hanykumar.in
-        </a>. We are committed to providing prompt assistance for any issues or inquiries.
-      </span>
+      <>
+        <p>
+          For support or privacy-related questions, visit{' '}
+          <a href={appContent.links.developerSite.url} target="_blank" rel="noopener noreferrer">
+            {appContent.links.developerSite.title}
+          </a>
+          .
+        </p>
+        <p>
+          Task List web app:{' '}
+          <a href={appContent.links.appSite.url} target="_blank" rel="noopener noreferrer">
+            {appContent.links.appSite.title}
+          </a>
+        </p>
+        <p>
+          Android app:{' '}
+          <a href={appContent.links.androidApp.url} target="_blank" rel="noopener noreferrer">
+            {appContent.links.androidApp.title}
+          </a>
+        </p>
+      </>
     ),
-  }
+  },
 ];
 
-
 const Home = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="app-container">
+    <main className="app-container">
       <header className="app-header">
-        <img src="/icon.png" alt="Task List App" className="app-icon" />
-        <h1>Task List - Privacy & Policy</h1>
+        <img src="/icon.png" alt="Task List App icon" className="app-icon" />
+        <div>
+          <h1>{APP_NAME} Privacy Policy</h1>
+          <p className="app-subtitle">Effective date: {EFFECTIVE_DATE}</p>
+        </div>
       </header>
 
-      <div className="policy-content">
-        {policyData.map((section, index) => (
-          <PolicySection key={index} title={section.title} content={section.content} />
+      <section className="overview-card">
+        <h2>{appContent.overview.title}</h2>
+        <p>{appContent.overview.subtitle}</p>
+        <ul>
+          {appContent.overview.bullets.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="toc-card" aria-label="Quick links">
+        <h2>Quick links</h2>
+        <ul className="toc-list">
+          {quickLinks.map((item) => (
+            <li key={item.id}>
+              <a href={`#${item.id}`}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="policy-content">
+        {policyData.map((section) => (
+          <PolicySection
+            key={section.id}
+            sectionId={section.id}
+            title={section.title}
+            content={section.content}
+          />
         ))}
-      </div>
-    </div>
+      </section>
+
+      <footer className="policy-footer">
+        <p>
+          © {APP_NAME} {currentYear}. All rights reserved.
+        </p>
+        <p>
+          Official website:{' '}
+          <a href={appContent.links.appSite.url} target="_blank" rel="noopener noreferrer">
+            {appContent.links.appSite.title}
+          </a>
+        </p>
+        <p>
+          Android app:{' '}
+          <a href={appContent.links.androidApp.url} target="_blank" rel="noopener noreferrer">
+            {appContent.links.androidApp.title}
+          </a>
+        </p>
+      </footer>
+    </main>
   );
 };
 
