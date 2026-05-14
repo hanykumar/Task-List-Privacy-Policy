@@ -35,7 +35,8 @@ const quickLinks = [
   { id: 'sharing-and-disclosure', label: 'Sharing and Disclosure' },
   { id: 'data-retention', label: 'Data Retention' },
   { id: 'your-controls', label: 'Your Controls' },
-  { id: 'reset-and-delete-actions', label: 'Reset and Delete Actions' },
+  { id: 'reset-action', label: 'Reset Action' },
+  { id: 'delete-action', label: 'Delete Action' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -44,109 +45,207 @@ const policyData = [
     id: 'introduction',
     title: '1) Introduction',
     content:
-      'This Privacy Policy explains how Task List collects, uses, and protects your information when you use the app and related services.',
+      'This Privacy Policy explains how Task List collects, uses, stores, and protects information when you use the application and related services.',
   },
   {
     id: 'information-we-collect',
     title: '2) Information We Collect',
     content:
-      'We collect your email address for account authentication and sync. We also process task data you create, including titles, descriptions, categories, reminders, and app preferences.',
+      'We collect basic account information such as your email address for authentication and synchronization purposes. We also process the task-related data you create inside the app, including task titles, descriptions, reminders, categories, preferences, and other settings.',
   },
   {
     id: 'how-we-use-information',
     title: '3) How We Use Information',
     content:
-      'Your information is used only to provide and improve core functionality such as authentication, task syncing, reminders, category management, search/filter operations, and account support.',
+      'Your information is used only to provide app functionality such as account access, task synchronization, reminders, offline sync recovery, category organization, search, filtering, and account-related support.',
   },
   {
     id: 'authentication-and-security',
     title: '4) Authentication and Security',
     content:
-      'Authentication is managed through Firebase. Passwords are not stored directly by Task List. We rely on Firebase authentication and standard security protections for session and account safety.',
+      'Account authentication is managed through Firebase Authentication. Task List does not directly store your account password. Industry-standard authentication and security protections are used to help protect your account and sessions.',
   },
   {
     id: 'task-data-protection',
     title: '5) Task Data Protection',
     content:
-      'Task content is protected and stored using secure Firebase-backed infrastructure. Sensitive categories include additional safeguards to reduce accidental exposure.',
+      'Task data is stored using secure Firebase-backed infrastructure. Additional safeguards may apply to sensitive or protected task categories to reduce accidental exposure.',
   },
-  {
-    id: 'secret-category-and-pin',
-    title: '6) Secret Category and PIN',
-    content:
-      'Sensitive tasks can be protected inside Secret categories with a PIN. Copy restrictions may apply for these entries to help protect confidential data.',
-  },
+ {
+  id: 'secret-category-and-pin',
+  title: '6) Secret Categories and PIN Protection',
+  content:
+    'Users can protect sensitive tasks by creating Secret categories secured with a PIN. The PIN is stored only on the user’s device in encrypted form and is used to unlock and access protected category tasks. Users can change their Secret category PIN at any time. To remove PIN protection from a Secret category, account password verification is required for additional security.',
+},
   {
     id: 'offline-use-and-sync',
-    title: '7) Offline Use and Sync',
+    title: '7) Offline Usage and Synchronization',
     content:
-      'Task List supports offline usage. Changes made offline sync automatically once internet connectivity returns.',
+      'Task List supports offline usage. Tasks and changes created while offline are automatically synchronized when an internet connection becomes available again.',
   },
   {
     id: 'sharing-and-disclosure',
     title: '8) Sharing and Disclosure',
     content:
-      'We do not sell personal data. We do not share your task content with third parties for advertising or marketing.',
+      'We do not sell your personal information or task data. Your data is not shared with third parties for advertising, profiling, or marketing purposes.',
   },
   {
     id: 'data-retention',
     title: '9) Data Retention',
     content:
-      'Your data is retained while your account remains active. You can reset your tasks or delete your account at any time from settings.',
+      'Your information remains associated with your account while the account is active. You may reset your stored app data or permanently delete your account at any time from the application settings.',
   },
   {
     id: 'your-controls',
-    title: '10) Your Controls',
+    title: '10) User Controls',
     content:
-      'You can manage categories, favorites, reminders, and account-related actions from within the app. Reset and account deletion actions require internet connectivity to complete.',
+      'You can manage reminders, categories, favorites, protected content, and account-related actions directly from within the application. Some actions, including account reset and account deletion, require an active internet connection.',
   },
   {
     id: 'childrens-privacy',
     title: "11) Children's Privacy",
     content:
-      'Task List is not intended for children under 13. If you believe a child has provided personal information, contact us and we will take appropriate action.',
+      'Task List is not intended for children under the age of 13. If you believe personal information belonging to a child has been submitted to the app, please contact us so appropriate action can be taken.',
   },
   {
     id: 'policy-updates',
-    title: '12) Policy Updates',
+    title: '12) Privacy Policy Updates',
     content:
-      'We may update this policy when features, legal requirements, or data practices change. The current version will always be available on this page.',
+      'This Privacy Policy may be updated from time to time to reflect feature updates, legal requirements, or changes to data practices. The latest version will always be available on this page.',
   },
   {
-    id: 'reset-and-delete-actions',
-    title: '13) Reset and Delete Actions',
+    id: 'reset-action',
+    title: '13) Reset Account Data',
     content: (
       <>
         <p>
-          You can reset tasks without deleting your account, or permanently delete your account from app settings.
+          Verified registered users can permanently remove all tasks and app-related
+          data without deleting their account.
         </p>
+
+        <p>
+          Resetting your account only removes stored data associated with the app.
+          Your account will remain active, and you can continue using the application normally.
+        </p>
+
+        <p>Steps to reset account data:</p>
+
+        <ol className="policy-list">
+          <li>Login to the application</li>
+          <li>Go to the Settings tab</li>
+          <li>Scroll down to "Reset Account"</li>
+          <li>Click on it</li>
+          <li>
+            A confirmation modal will appear. Type <strong>Reset</strong> in the text field
+          </li>
+          <li>Click on "Yes"</li>
+          <li>
+            After successful reset, a confirmation message will appear indicating that your tasks and app data have been removed
+          </li>
+          <li>
+            You will remain logged into the application and can continue adding new tasks or data
+          </li>
+        </ol>
+
         <p className="policy-note">
-          Account deletion removes account-associated data from our systems and cannot be undone.
+          Make sure your internet connection is enabled while performing these steps.
+        </p>
+
+        <p className="policy-note">
+          Reset actions permanently remove stored tasks and related app data and cannot be undone.
         </p>
       </>
     ),
   },
   {
+  id: 'delete-action',
+  title: '14) Delete Account',
+  content: (
+    <>
+      <p>
+        Verified registered users can permanently delete their account together
+        with all associated tasks and app data.
+      </p>
+
+      <p>
+        Account deletion is available through both the mobile application and the web application.
+        Once deletion is completed, the account and associated data cannot be recovered.
+      </p>
+
+      <p>Steps to delete your account from the mobile application:</p>
+
+      <ol className="policy-list">
+        <li>Login to the application</li>
+        <li>Go to the Settings tab</li>
+        <li>Scroll down to "Delete Account"</li>
+        <li>Click on it</li>
+        <li>
+          A confirmation modal will appear. Enter your <strong>password</strong> to confirm deletion
+        </li>
+        <li>Click on "Yes"</li>
+        <li>
+          After successful deletion, a confirmation message will appear
+        </li>
+        <li>
+          You will be logged out of the application and redirected to the login screen
+        </li>
+      </ol>
+
+      <p>Steps to delete your account from the web application:</p>
+
+      <ol className="policy-list">
+        <li>Login to the web application</li>
+        <li>Open the Settings page from the header menu</li>
+        <li>Go to "Delete Account"</li>
+        <li>Enter your account password to confirm deletion</li>
+        <li>Confirm the deletion request</li>
+      </ol>
+
+      <p className="policy-note">
+        Make sure your internet connection is enabled while performing these steps.
+      </p>
+
+      <p className="policy-note">
+        We do not retain deleted user account data after the deletion process is completed.
+      </p>
+    </>
+  ),
+},
+  {
     id: 'contact',
-    title: '14) Contact',
+    title: '15) Contact',
     content: (
       <>
         <p>
-          For support or privacy-related questions, visit{' '}
-          <a href={appContent.links.developerSite.url} target="_blank" rel="noopener noreferrer">
+          For support, privacy concerns, or account-related questions, please visit{' '}
+          <a
+            href={appContent.links.developerSite.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {appContent.links.developerSite.title}
           </a>
           .
         </p>
+
         <p>
-          Task List web app:{' '}
-          <a href={appContent.links.appSite.url} target="_blank" rel="noopener noreferrer">
+          Official web app:{' '}
+          <a
+            href={appContent.links.appSite.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {appContent.links.appSite.title}
           </a>
         </p>
+
         <p>
-          Android app:{' '}
-          <a href={appContent.links.androidApp.url} target="_blank" rel="noopener noreferrer">
+          Android application:{' '}
+          <a
+            href={appContent.links.androidApp.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {appContent.links.androidApp.title}
           </a>
         </p>
