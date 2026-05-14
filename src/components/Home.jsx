@@ -35,6 +35,7 @@ const quickLinks = [
   { id: 'sharing-and-disclosure', label: 'Sharing and Disclosure' },
   { id: 'data-retention', label: 'Data Retention' },
   { id: 'your-controls', label: 'Your Controls' },
+  { id: 'reset-and-delete-actions', label: 'Reset and Delete Actions' },
   { id: 'contact', label: 'Contact' },
 ];
 
